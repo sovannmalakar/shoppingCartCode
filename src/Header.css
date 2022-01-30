@@ -1,0 +1,17 @@
+#headerDiv{
+    background-color: yellow;
+    height:100px;
+    
+}
+
+.headerText{
+    color:green;
+    font-size: 48px;
+    float:right;
+}
+
+#headerImg
+{
+    float: left;
+    height:75px;
+}

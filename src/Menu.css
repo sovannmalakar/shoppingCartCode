@@ -1,0 +1,41 @@
+
+
+li{
+    display: inline-block;
+    border-right: 5px solid white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+
+}
+
+.sovan{
+    background-color: #004f9a;
+    color: white;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+}
+
+a:hover {
+    color: rgb(172, 243, 243);
+  }
+
+.header_bg{
+    background-color: #0071dc;
+}
+
+.background_lottery{
+    background-color: #EFEFEF;
+    padding: 5px 5px 5px 15px;
+    font-size: 35px;
+    display: inline-block;
+    width: 100%;
+    transition: background-color 0.5s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #004f9a;
+}
