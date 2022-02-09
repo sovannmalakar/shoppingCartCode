@@ -57,7 +57,7 @@ class LotteryCart extends React.Component {
                         <h2 className='card-title'> {item.productName}</h2>
                         <p className='card-text'> Price : Rs.{item.price}</p>
                         <p className='card-text'> Quantity : {item.quantity}</p>
-                        <input type="button" value="Add To Cart" className='btn btn-primary' onClick={()=>{this.addToCartEventHandler(item)}} />
+                        <input type="button" value="PLAY" className='btn btn-primary' onClick={()=>{this.addToCartEventHandler(item)}} />
                        {/*  <input type="button" value="Add To Cart" className='btn btn-primary' onClick={this.addToCartEventHandler.bind(this,item)} /> */}
                     </div>
                 </div>

@@ -12,7 +12,7 @@ export default class Home extends Component {
     return (
     <div>
         <Switch>
-            <Redirect path="/" to="/products" exact></Redirect>
+            <Redirect path="/" to="/test" exact></Redirect>
             <Route path="/products" component={Products}></Route>
             <Route path="/payments" component={Payments}></Route>
             <Route path="/orders" component={Orders}></Route>

@@ -7,8 +7,8 @@ export default class Menu extends Component {
     return (
     <div className='sovan'>
         <ul>
-            <li color='white'>
-               <Link to="/products" >Products</Link>
+            <li>
+                <Link to="/test" >Home</Link>
             </li>
             <li>
                <Link to="/payments" >Payments</Link>
@@ -18,12 +18,6 @@ export default class Menu extends Component {
             </li>
             <li>
                <Link to="/aboutus" >About Us</Link>
-            </li>
-            <li>
-               <Link to="/lottery" >Lottery Products</Link>
-            </li>
-            <li>
-               <Link to="/test" >Test</Link>
             </li>
         </ul>
 

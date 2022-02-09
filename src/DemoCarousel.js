@@ -17,7 +17,7 @@ class DemoCarousel extends Component {
                 <img  alt=" " width="1170" height="400" src="/images/lottery_image2.jpg"/>
                 </div>
                 <div>
-                <LotteryCart  className='card-img-top p-2' style={imgHeight}  />
+                 <img  alt=" " width="1170" height="400" src="/images/mega_millions.png"/>
                 </div>
             </Carousel>
         );
