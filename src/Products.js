@@ -21,7 +21,7 @@ class Products extends React.Component {
     }
     
     addToCartEventHandler=(selectedProduct)=>{
-        alert("Add To cart button clicked "+ selectedProduct.productName);
+        alert("Add To cart button clicked "+ JSON.stringify(selectedProduct));
         //this.showAddToCart=true;
         //this.selectedProduct=selectedProduct;
         
@@ -29,7 +29,7 @@ class Products extends React.Component {
         // call the render implicitly
         this.setState({showAddToCart:true,selectedProduct:selectedProduct},()=>{
             alert("Show Add To cart : "+this.state.showAddToCart); // expected output : false; actual value : true once setState completes
-        
+            this.props.history.push("/lotteryDetails",{selectedProduct:this.state.selectedProduct});
         });
         //1. modify the state
         //2. call render implicitly

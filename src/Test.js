@@ -74,7 +74,7 @@ class Test extends React.Component {
         return (
             <div>
               <DemoCarousel/>
-              <Products/>
+              <Products history={this.props.history}/>
             </div>
         )
     }

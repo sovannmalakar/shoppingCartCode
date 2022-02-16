@@ -1,6 +1,8 @@
 import React from 'react'
 import wLogo from "./Walmart1_Logo.jpg"
-
+//import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import NotificationBadge from 'react-notification-badge';
 
 // create a class components
 
@@ -16,7 +18,8 @@ class Header extends React.Component {
 
                     <h1 className='col-8 text-warning'></h1>
                 </div>
-
+                <ShoppingCartIcon style={{float:"right", fontSize:"2.5rem"}} />
+                <NotificationBadge count={9} />
             </div>
 
         );

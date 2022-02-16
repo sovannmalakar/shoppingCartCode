@@ -6,6 +6,7 @@ import Orders from './Orders';
 import AboutUs from './AboutUs';
 import LotteryCart from './LotteryCart';
 import Test   from "./Test";
+import LotteryDetails from './lotteryDetails';
 
 export default class Home extends Component {
   render() {
@@ -18,6 +19,7 @@ export default class Home extends Component {
             <Route path="/orders" component={Orders}></Route>
             <Route path="/aboutus" component={AboutUs}></Route>
             <Route path="/lottery" component={LotteryCart}></Route>
+            <Route path="/lotteryDetails" component={LotteryDetails}></Route>
             <Route path="/test" component={Test}></Route>
             <Route path ="**" 
             render={
