@@ -9,16 +9,19 @@ class Products extends React.Component {
             showAddToCart:false,
             selectedProduct:{},
             productsArr : [
-                { productId: "P101", productName: "Iphone", description: "Apple Iphone 13 ", price: 115678, quantity: 12, imageUrl: "/images/iphone.jpg" },
-                { productId: "P102", productName: "Samsung", description: "Samsung fold3 ", price: 155678, quantity: 5, imageUrl: "/images/samsung.jpg" },
-                { productId: "P103", productName: "One plus", description: "One plus 9 ", price: 45678, quantity: 7, imageUrl: "/images/oneplus9.jpg" },
-                { productId: "P104", productName: "Nokia", description: "Nokia 33", price: 5678, quantity: 2, imageUrl: "/images/nokia.jpg" },
-                { productId: "P105", productName: "Realme", description: "Realme 33", price: 5678, quantity: 2, imageUrl: "/images/nokia.jpg" }
+                { productId: "P101", productName: "PICK-4", description: "", price: 5000, quantity: 12, imageUrl: "/images/pick-4.svg" },
+                { productId: "P103", productName: "POWER-BALL", description: "", price: 45678, quantity: 7, imageUrl: "/images/powerball.svg" },
+                { productId: "P104", productName: "MEGAMILLIONS", description: "", price: 5678, quantity: 2, imageUrl: "/images/megamillions.svg" },
+                { productId: "P105", productName: "LOTTO", description: "", price: 5678, quantity: 2, imageUrl: "/images/lotto.svg" },
+                 { productId: "P101", productName: "PICK-4", description: "", price: 5000, quantity: 12, imageUrl: "/images/pick-4.svg" },
+                 { productId: "P103", productName: "POWER-BALL", description: "", price: 45678, quantity: 7, imageUrl: "/images/powerball.svg" },
+                 { productId: "P104", productName: "MEGAMILLIONS", description: "", price: 5678, quantity: 2, imageUrl: "/images/megamillions.svg" },
+                 { productId: "P105", productName: "LOTTO", description: "", price: 5678, quantity: 2, imageUrl: "/images/lotto.svg" }
         ]}
     }
     
     addToCartEventHandler=(selectedProduct)=>{
-        alert("Add To cart button clicked "+ selectedProduct.productName);
+        alert("Add To cart button clicked "+ JSON.stringify(selectedProduct));
         //this.showAddToCart=true;
         //this.selectedProduct=selectedProduct;
         
@@ -26,7 +29,7 @@ class Products extends React.Component {
         // call the render implicitly
         this.setState({showAddToCart:true,selectedProduct:selectedProduct},()=>{
             alert("Show Add To cart : "+this.state.showAddToCart); // expected output : false; actual value : true once setState completes
-        
+            this.props.history.push("/lotteryDetails",{selectedProduct:this.state.selectedProduct});
         });
         //1. modify the state
         //2. call render implicitly
@@ -51,17 +54,17 @@ class Products extends React.Component {
     }
     render() {
         
-        var imgHeight={height:"200px"};
+        var imgHeight={};
         var cardArr =this.state.productsArr.map(item => {
             return (
-                <div className='col-4'>
-                <div className='card bg-warning text-primary m-2'>
-                    <img className='card-img-top p-2' style={imgHeight} src={item.imageUrl} alt={item.productName} />
-                    <div className='card-body'>
-                        <h2 className='card-title'> {item.productName}</h2>
-                        <p className='card-text'> Price : Rs.{item.price}</p>
-                        <p className='card-text'> Quantity : {item.quantity}</p>
-                        <input type="button" value="Add To Cart" className='btn btn-primary' onClick={()=>{this.addToCartEventHandler(item)}} />
+                <div className='col-3' >
+                <div className='card m-2 ' >
+                    <img className='card-img-top p-2'  src={item.imageUrl} alt={item.productName} style={ {height:"200px" } }/>
+                    <div className='card-body' >
+                        <h2 className='card-title' > {item.productName}</h2>
+                        <p className='card-text'> WIN UP TO ${item.price}</p>
+                        <p className='card-text'> QUANTITY {item.quantity}</p>
+                        <input type="button" value="PLAY"  STYLE="background-color: #8dda2f;" onClick={()=>{this.addToCartEventHandler(item)}} />
                        {/*  <input type="button" value="Add To Cart" className='btn btn-primary' onClick={this.addToCartEventHandler.bind(this,item)} /> */}
                     </div>
                 </div>
@@ -70,7 +73,7 @@ class Products extends React.Component {
         })
         return (
             <div>
-                <div> <h1 className='background_lottery'>Play lottery online</h1></div>
+                <div> <h1 className='background_lottery'> Walmart Online Lottery Games </h1></div>
                
                 <div className='container'>
                     <div className='row'>

@@ -6,18 +6,20 @@ import Orders from './Orders';
 import AboutUs from './AboutUs';
 import LotteryCart from './LotteryCart';
 import Test   from "./Test";
+import LotteryDetails from './lotteryDetails';
 
 export default class Home extends Component {
   render() {
     return (
     <div>
         <Switch>
-            <Redirect path="/" to="/products" exact></Redirect>
+            <Redirect path="/" to="/test" exact></Redirect>
             <Route path="/products" component={Products}></Route>
             <Route path="/payments" component={Payments}></Route>
             <Route path="/orders" component={Orders}></Route>
             <Route path="/aboutus" component={AboutUs}></Route>
             <Route path="/lottery" component={LotteryCart}></Route>
+            <Route path="/lotteryDetails" component={LotteryDetails}></Route>
             <Route path="/test" component={Test}></Route>
             <Route path ="**" 
             render={

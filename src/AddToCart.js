@@ -41,7 +41,7 @@ class AddToCart extends React.Component {
         // pass the data (item + quantitySelected)to the parentProducts component
         var cartObj={...this.props.selectedProd,quantitySelected:this.state.quantitySelected}
         this.props.onConfirm(this.state.quantitySelected);// triggering an event and embedding the data in the event
-        this.props.history.push("/payments",{cartObj:cartObj});
+        this.props.history.push("/lotteryDetails",{cartObj:cartObj});
     }
     render() {
 
