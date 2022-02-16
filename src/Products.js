@@ -13,22 +13,22 @@ class Products extends React.Component {
                 { productId: "P103", productName: "POWER-BALL", description: "", price: 45678, quantity: 7, imageUrl: "/images/powerball.svg" },
                 { productId: "P104", productName: "MEGAMILLIONS", description: "", price: 5678, quantity: 2, imageUrl: "/images/megamillions.svg" },
                 { productId: "P105", productName: "LOTTO", description: "", price: 5678, quantity: 2, imageUrl: "/images/lotto.svg" },
-                 { productId: "P101", productName: "PICK-4", description: "", price: 5000, quantity: 12, imageUrl: "/images/pick-4.svg" },
-                 { productId: "P103", productName: "POWER-BALL", description: "", price: 45678, quantity: 7, imageUrl: "/images/powerball.svg" },
-                 { productId: "P104", productName: "MEGAMILLIONS", description: "", price: 5678, quantity: 2, imageUrl: "/images/megamillions.svg" },
-                 { productId: "P105", productName: "LOTTO", description: "", price: 5678, quantity: 2, imageUrl: "/images/lotto.svg" }
+                 { productId: "P101", productName: "MEGA EURO", description: "", price: 5000, quantity: 12, imageUrl: "/images/mega_euro.png" },
+                 { productId: "P103", productName: "JOKER", description: "", price: 45678, quantity: 7, imageUrl: "/images/joker.png" },
+                 { productId: "P104", productName: "12 MILLIONS", description: "", price: 5678, quantity: 2, imageUrl: "/images/12_millions.png" },
+                 { productId: "P105", productName: "SUPPER STAR", description: "", price: 5678, quantity: 2, imageUrl: "/images/supper_star.png" }
         ]}
     }
     
     addToCartEventHandler=(selectedProduct)=>{
-        alert("Add To cart button clicked "+ JSON.stringify(selectedProduct));
+       // alert("Add To cart button clicked "+ JSON.stringify(selectedProduct));
         //this.showAddToCart=true;
         //this.selectedProduct=selectedProduct;
         
         // call the render function again explicitly
         // call the render implicitly
         this.setState({showAddToCart:true,selectedProduct:selectedProduct},()=>{
-            alert("Show Add To cart : "+this.state.showAddToCart); // expected output : false; actual value : true once setState completes
+         //   alert("Show Add To cart : "+this.state.showAddToCart); // expected output : false; actual value : true once setState completes
             this.props.history.push("/lotteryDetails",{selectedProduct:this.state.selectedProduct});
         });
         //1. modify the state

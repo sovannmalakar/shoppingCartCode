@@ -54,7 +54,7 @@ class Test extends React.Component {
     }
     render() {
         
-        var imgHeight={height:"200px"};
+        var imgHeight={height:"100px"};
         var cardArr =this.state.productsArr.map(item => {
             return (
                 <div className='col-4'>
