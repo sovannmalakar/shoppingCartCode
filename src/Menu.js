@@ -11,10 +11,10 @@ export default class Menu extends Component {
                 <Link to="/test" >Home</Link>
             </li>
             <li>
-               <Link to="/payments" >Payments</Link>
-            </li>
-            <li>
                <Link to="/orders" >Orders</Link>
+             </li>
+            <li>
+               <Link to="/payments" >Payments</Link>
             </li>
             <li>
                <Link to="/aboutus" >About Us</Link>

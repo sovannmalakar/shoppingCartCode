@@ -58,8 +58,8 @@ class Products extends React.Component {
         var cardArr =this.state.productsArr.map(item => {
             return (
                 <div className='col-3' >
-                <div className='card m-2 ' >
-                    <img className='card-img-top p-2'  src={item.imageUrl} alt={item.productName} style={ {height:"200px" } }/>
+                <div className='card m-3 ' STYLE="background-color: #f5fffa;">
+                    <img className='card-img-top p-3'  src={item.imageUrl} alt={item.productName} style={ {height:"200px" } }/>
                     <div className='card-body' >
                         <h2 className='card-title' > {item.productName}</h2>
                         <p className='card-text'> WIN UP TO ${item.price}</p>
